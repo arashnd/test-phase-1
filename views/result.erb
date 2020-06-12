@@ -1,0 +1,24 @@
+<h1>Monthly installment will be Rs : <%= @monthly_installment %></h1>
+
+<table>
+  <tr>
+    <th>Total Cost</th>
+    <td><%= @price %></td>
+  </tr>
+  <tr>
+    <th>Down Payment</th>
+    <td><%= @down_payment %> (<%= @d_pay_percentage %>%)</td>
+  </tr>
+  <tr>
+    <th>Installment Years</th>
+    <td><%= @intsallment_years %></td>
+  </tr>
+  <tr>
+    <th>Markup Rate</th>
+    <td><%= @markup %>%</td>
+  </tr>
+</table>
+
+<div class="">
+  <p><a href="/">Back to main</a></p>
+</div>

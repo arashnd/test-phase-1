@@ -1,0 +1,33 @@
+<h1><%= @title %></h1>
+
+<form class="" action="/check_eligibility" method="post">
+  <div class="">
+    <input type="radio" name="status" value="1" id="salaried_personnel" />
+    <label for="salaried_personnel">Salaried Personnel</label>
+    <input type="radio" name="status" value="2" id="business_personnel" />
+    <label for="business_personnel">Business Personnel</label>
+  </div>
+
+  <div class="">
+    <label for="age">Age :</label></br />
+    <input type="text" name="age" value="" id="age" />
+  </div>
+
+  <div class="">
+    <label for="monthly_income">Monthly income :</label><br />
+    <input type="text" name="income" value="" id="monthly_income" /> PKR
+  </div>
+
+  <div class="">
+    <label for="nationality">Nationality :</label><br />
+    <select name="nationality" id="nationality">
+      <% @nationalities.each_pair  do |key, value| %>
+        <option value="<%= key %>"><%= value %></option>
+      <% end %>
+    </select><br />
+  </div>
+
+  <div class="">
+      <input type="submit" value="Check Eligibility"/>
+  </div>
+</form>

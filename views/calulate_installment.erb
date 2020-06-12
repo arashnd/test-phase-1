@@ -1,0 +1,44 @@
+<h1>Calculate Installment</h1>
+
+<form class="" action="/calculate" method="post">
+  <div class="">
+    <label for="car">Car Model :</label>
+    <select name="car" id="car">
+      <% @cars.each_pair  do |key, value| %>
+        <option value="<%= key %>"><%= value %></option>
+      <% end %>
+    </select><br />
+  </div>
+
+  <div class="">
+    <label for="cost">Total Cost :</label><br />
+    <input type="text" name="cost" value="" id="cost" />
+  </div>
+
+  <div class="">
+    <label for="down_payment">Down Payment :</label><br />
+    <input type="text" name="downPayment" value="" id="down_payment" /> PKR
+  </div>
+
+  <div class="">
+      <span>Number of years :</span><br />
+
+      <input type="radio" name="noOfYears" value="3" id="three" />
+      <label for="three">Three</label><br />
+
+      <input type="radio" name="noOfYears" value="4" id="four" />
+      <label for="four">Four</label><br />
+
+      <input type="radio" name="noOfYears" value="5" id="five" />
+      <label for="five">Five</label> <br />
+  </div>
+
+  <div class="">
+    <label for="mark_up">Mark up rate :</label><br />
+    <input type="text" name="markUpRate" value="" id="mark_up" /> %<br />
+  </div>
+
+  <div class="">
+    <input type="submit" value="Calculate"/>
+  </div>
+</form>
